@@ -1,72 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" width="1100" height="640">
-<defs><marker id="m334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="m334155s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#334155"/></marker><marker id="m94a3b8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker><marker id="m94a3b8s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#94a3b8"/></marker><marker id="m16a34a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="m16a34as" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#16a34a"/></marker><marker id="m7c3aed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="m7c3aeds" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#7c3aed"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+<defs><marker id="m333333" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333333"/></marker><marker id="m333333s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#333333"/></marker><marker id="m1f3a5f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/></marker><marker id="m1f3a5fs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1f3a5f"/></marker><marker id="m9a9a9a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a9a9a"/></marker><marker id="m9a9a9as" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#9a9a9a"/></marker></defs>
 <rect width="100%" height="100%" fill="#ffffff"/>
-<text x="550" y="32" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="middle">ROS 2 토픽 흐름 — 이름 · 메시지 타입 · 주기 · QoS</text>
-<rect x="30" y="230" width="170" height="110" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
-<text x="115.0" y="256" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">Gazebo</text>
-<text x="115.0" y="278.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">gz-sim + ros_gz_bridge</text>
-<text x="115.0" y="292.85" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">(sp_gazebo)</text>
-<rect x="240" y="254" width="190" height="62" rx="31" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-<text x="335.0" y="276" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">/ground_truth</text>
-<text x="335.0" y="293" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="middle">nav_msgs/Odometry</text>
-<text x="335.0" y="309" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="bold" fill="#16a34a" text-anchor="middle">50 Hz (sim time)</text>
-<rect x="470" y="230" width="160" height="110" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
-<text x="550.0" y="256" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">zerokey_sim</text>
-<text x="550.0" y="278.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">sp_cnu_bridge</text>
-<text x="550.0" y="292.85" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">rate_hz = 50</text>
-<line x1="200" y1="285" x2="238" y2="285" stroke="#334155" stroke-width="2" marker-end="url(#m334155)"/>
-<line x1="430" y1="285" x2="468" y2="285" stroke="#334155" stroke-width="2" marker-end="url(#m334155)"/>
-<rect x="670" y="90" width="250" height="62" rx="31" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-<text x="795.0" y="112" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">/zerokey/position</text>
-<text x="795.0" y="129" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="middle">geometry_msgs/PointStamped</text>
-<text x="795.0" y="145" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="bold" fill="#16a34a" text-anchor="middle">50 Hz · [m]  → X, Y, Z</text>
-<line x1="630" y1="285" x2="668" y2="121" stroke="#334155" stroke-width="2" marker-end="url(#m334155)"/>
-<rect x="670" y="255" width="250" height="62" rx="31" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-<text x="795.0" y="277" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">/zerokey/orientation</text>
-<text x="795.0" y="294" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="middle">geometry_msgs/QuaternionStamped</text>
-<text x="795.0" y="310" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="bold" fill="#16a34a" text-anchor="middle">50 Hz · 쿼터니언 → RZ</text>
-<line x1="630" y1="285" x2="668" y2="286" stroke="#334155" stroke-width="2" marker-end="url(#m334155)"/>
-<rect x="670" y="420" width="250" height="62" rx="31" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-<text x="795.0" y="442" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">/zerokey/vel</text>
-<text x="795.0" y="459" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="middle">geometry_msgs/TwistStamped</text>
-<text x="795.0" y="475" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="bold" fill="#16a34a" text-anchor="middle">50 Hz · [m/s] (지금은 미사용)</text>
-<line x1="630" y1="285" x2="668" y2="451" stroke="#334155" stroke-width="2" marker-end="url(#m334155)"/>
-<text x="795" y="80" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="bold" fill="#7c3aed" text-anchor="middle">QoS: Reliable · Volatile · KeepLast(10)  =  실기 Simulink 와 동일</text>
-<rect x="950" y="200" width="130" height="170" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
-<text x="1015.0" y="226" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">mpos_server</text>
-<text x="1015.0" y="248.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">sp_cnu_bridge</text>
-<text x="1015.0" y="262.85" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">TCP :5010</text>
-<text x="1015.0" y="277.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle"></text>
-<text x="1015.0" y="292.55" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">구독: position</text>
-<text x="1015.0" y="307.4" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">     orientation</text>
-<line x1="920" y1="121" x2="948" y2="240" stroke="#334155" stroke-width="2" marker-end="url(#m334155)"/>
-<line x1="920" y1="286" x2="948" y2="285" stroke="#334155" stroke-width="2" marker-end="url(#m334155)"/>
-<line x1="920" y1="451" x2="1015" y2="372" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#m94a3b8)"/>
-<text x="985" y="470" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#94a3b8" text-anchor="middle">(vel 은 구독 안 함)</text>
-<rect x="400" y="540" width="215" height="62" rx="31" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-<text x="507.5" y="562" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">/cnu_bridge/mpos</text>
-<text x="507.5" y="579" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="middle">geometry_msgs/PoseStamped</text>
-<text x="507.5" y="595" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="bold" fill="#16a34a" text-anchor="middle">10 Hz · 디버그/RViz</text>
-<rect x="630" y="540" width="215" height="62" rx="31" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-<text x="737.5" y="562" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">/cnu_bridge/heading_deg</text>
-<text x="737.5" y="579" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="middle">std_msgs/Float64</text>
-<text x="737.5" y="595" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="bold" fill="#16a34a" text-anchor="middle">10 Hz · 헤딩 [deg]</text>
-<rect x="860" y="540" width="215" height="62" rx="31" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-<text x="967.5" y="562" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#0f172a" text-anchor="middle">/cnu_bridge/last_tx</text>
-<text x="967.5" y="579" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="middle">std_msgs/String</text>
-<text x="967.5" y="595" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="bold" fill="#16a34a" text-anchor="middle">요청마다 · 보낸 TCP 프레임</text>
-<line x1="1015" y1="370" x2="1015" y2="520" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
-<line x1="507" y1="520" x2="1015" y2="520" stroke="#16a34a" stroke-width="2"/>
-<line x1="507" y1="520" x2="507" y2="538" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
-<line x1="737" y1="520" x2="737" y2="538" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
-<line x1="967" y1="520" x2="967" y2="538" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
-<text x="30" y="560" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="12" font-weight="bold" fill="#16a34a" text-anchor="start">mpos_server 가 내는 확인용 토픽</text>
-<text x="30" y="580" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">(JW 로 가는 값과 같은 값을</text>
-<text x="30" y="597" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start"> ROS 안에서도 볼 수 있게)</text>
-<rect x="240" y="75" width="380" height="125" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="6 4"/>
-<text x="430" y="100" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="bold" fill="#7c3aed" text-anchor="middle">실기 연결 시 (나중에)</text>
-<text x="430" y="124.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11.5" font-weight="normal" fill="#7c3aed" text-anchor="middle">ZeroKey 드라이버가 같은 3 토픽을 낸다</text>
-<text x="430" y="139.525" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11.5" font-weight="normal" fill="#7c3aed" text-anchor="middle">→ zerokey_sim 만 끄면 된다</text>
-<text x="430" y="155.05" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11.5" font-weight="normal" fill="#7c3aed" text-anchor="middle">use_zerokey_sim:=false</text>
-<line x1="620" y1="140" x2="668" y2="121" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#m7c3aed)"/>
+<rect x="30" y="205" width="170" height="100" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="115.0" y="229" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Gazebo</text>
+<text x="115.0" y="250.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">gz-sim + ros_gz_bridge</text>
+<text x="115.0" y="264.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">(sp_gazebo)</text>
+<rect x="235" y="226" width="190" height="58" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="330.0" y="246" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/ground_truth</text>
+<text x="330.0" y="262" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">nav_msgs/Odometry</text>
+<text x="330.0" y="277" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">50 Hz (sim time)</text>
+<rect x="460" y="205" width="160" height="100" rx="0" fill="#e9eef5" stroke="#1f3a5f" stroke-width="1.4"/>
+<text x="540.0" y="229" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#1f3a5f" text-anchor="middle">zerokey_sim</text>
+<text x="540.0" y="250.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">sp_cnu_bridge</text>
+<text x="540.0" y="264.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">rate_hz = 50</text>
+<line x1="200" y1="255" x2="233" y2="255" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<line x1="425" y1="255" x2="458" y2="255" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<rect x="660" y="70" width="250" height="58" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="785.0" y="90" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/zerokey/position</text>
+<text x="785.0" y="106" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">geometry_msgs/PointStamped</text>
+<text x="785.0" y="121" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">50 Hz · [m] → X, Y, Z</text>
+<line x1="620" y1="255" x2="658" y2="99" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<rect x="660" y="226" width="250" height="58" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="785.0" y="246" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/zerokey/orientation</text>
+<text x="785.0" y="262" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">geometry_msgs/QuaternionStamped</text>
+<text x="785.0" y="277" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">50 Hz · 쿼터니언 → RZ</text>
+<line x1="620" y1="255" x2="658" y2="255" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<rect x="660" y="382" width="250" height="58" rx="0" fill="#ffffff" stroke="#9a9a9a" stroke-width="1.0" stroke-dasharray="4 3"/>
+<text x="785.0" y="402" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#4d4d4d" text-anchor="middle">/zerokey/vel</text>
+<text x="785.0" y="418" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">geometry_msgs/TwistStamped</text>
+<text x="785.0" y="433" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">50 Hz · [m/s] · 미사용</text>
+<line x1="620" y1="255" x2="658" y2="411" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<text x="785" y="55" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10" font-weight="normal" fill="#4d4d4d" text-anchor="middle">QoS: Reliable · Volatile · KeepLast(10) (실기 Simulink 와 동일)</text>
+<rect x="945" y="180" width="135" height="150" rx="0" fill="#e9eef5" stroke="#1f3a5f" stroke-width="1.4"/>
+<text x="1012.5" y="204" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#1f3a5f" text-anchor="middle">mpos_server</text>
+<text x="1012.5" y="225.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">sp_cnu_bridge</text>
+<text x="1012.5" y="239.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">TCP :5010</text>
+<text x="1012.5" y="254.4" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle"></text>
+<text x="1012.5" y="269.1" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">구독: position,</text>
+<text x="1012.5" y="283.8" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">orientation</text>
+<line x1="910" y1="99" x2="943" y2="215" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<line x1="910" y1="255" x2="943" y2="255" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<rect x="400" y="515" width="215" height="58" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="507.5" y="535" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/cnu_bridge/mpos</text>
+<text x="507.5" y="551" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">geometry_msgs/PoseStamped</text>
+<text x="507.5" y="566" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">10 Hz · 확인용</text>
+<rect x="630" y="515" width="215" height="58" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="737.5" y="535" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/cnu_bridge/heading_deg</text>
+<text x="737.5" y="551" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">std_msgs/Float64</text>
+<text x="737.5" y="566" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">10 Hz · 헤딩 [deg]</text>
+<rect x="860" y="515" width="215" height="58" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="967.5" y="535" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/cnu_bridge/last_tx</text>
+<text x="967.5" y="551" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">std_msgs/String</text>
+<text x="967.5" y="566" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="9.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">요청마다 · 송신 프레임</text>
+<line x1="1012" y1="330" x2="1012" y2="495" stroke="#1f3a5f" stroke-width="1.0"/>
+<line x1="507" y1="495" x2="1012" y2="495" stroke="#1f3a5f" stroke-width="1.0"/>
+<line x1="507" y1="495" x2="507" y2="513" stroke="#1f3a5f" stroke-width="1.2" marker-end="url(#m1f3a5f)"/>
+<line x1="737" y1="495" x2="737" y2="513" stroke="#1f3a5f" stroke-width="1.2" marker-end="url(#m1f3a5f)"/>
+<line x1="967" y1="495" x2="967" y2="513" stroke="#1f3a5f" stroke-width="1.2" marker-end="url(#m1f3a5f)"/>
+<text x="30" y="530" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="start">mpos_server 확인용 출력</text>
+<text x="30" y="548" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="start">(JW 송신값과 동일한 값을 ROS 에서 확인)</text>
+<rect x="235" y="60" width="385" height="110" rx="0" fill="#ffffff" stroke="#9a9a9a" stroke-width="1.0" stroke-dasharray="4 3"/>
+<text x="427" y="84" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">실기 연결 시</text>
+<text x="427" y="106.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">ZeroKey 드라이버가 동일 토픽 발행</text>
+<text x="427" y="120.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">zerokey_sim 비활성</text>
+<text x="427" y="135.4" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">use_zerokey_sim:=false</text>
+<line x1="620" y1="115" x2="658" y2="100" stroke="#9a9a9a" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#m9a9a9a)"/>
 </svg>

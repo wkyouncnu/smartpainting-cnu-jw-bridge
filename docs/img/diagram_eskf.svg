@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 330" width="1100" height="330">
+<defs><marker id="m333333" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333333"/></marker><marker id="m333333s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#333333"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="20" y="30" width="170" height="80" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="105.0" y="54" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/imu</text>
+<text x="105.0" y="75.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">sensor_msgs/Imu</text>
+<text x="105.0" y="89.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">200 Hz · 각속도·가속도</text>
+<rect x="20" y="175" width="170" height="80" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="105.0" y="199" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">/joint_states</text>
+<text x="105.0" y="220.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">구동륜 26개 회전량</text>
+<text x="105.0" y="234.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">엔코더 4096 tick/rev</text>
+<rect x="250" y="175" width="170" height="80" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="335.0" y="199" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">wheel_odom</text>
+<text x="335.0" y="220.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">회전량 → 속도</text>
+<text x="335.0" y="234.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">50 Hz → /odom_enc</text>
+<rect x="480" y="175" width="170" height="80" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="565.0" y="199" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">slip_injector</text>
+<text x="565.0" y="220.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">반경 오차·slip 주입</text>
+<text x="565.0" y="234.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">→ /odom_slip</text>
+<line x1="190" y1="215" x2="248" y2="215" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<line x1="420" y1="215" x2="478" y2="215" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<rect x="710" y="20" width="240" height="250" rx="0" fill="#e9eef5" stroke="#1f3a5f" stroke-width="1.4"/>
+<text x="830" y="44" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#1f3a5f" text-anchor="middle">eskf_node</text>
+<text x="830" y="64.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">상태 9차원</text>
+<text x="830" y="78.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">[x, y, ψ, vx, vy, bax, bay, bg, k]</text>
+<rect x="725" y="100" width="210" height="50" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="830" y="120.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#1a1a1a" text-anchor="middle">예측 (IMU 200 Hz)</text>
+<text x="830" y="134.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#1a1a1a" text-anchor="middle">적분, P = F P Fᵀ + Q</text>
+<rect x="725" y="160" width="210" height="62" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="830" y="179.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#1a1a1a" text-anchor="middle">보정 (엔코더 50 Hz)</text>
+<text x="830" y="193.7" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#1a1a1a" text-anchor="middle">전진속도 · NHC · 각속도</text>
+<text x="830" y="208.4" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#1a1a1a" text-anchor="middle">정지 시 ZUPT</text>
+<text x="830" y="250" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10.5" font-weight="normal" fill="#4d4d4d" text-anchor="middle">오차상태 주입 → 리셋</text>
+<line x1="190" y1="70" x2="723" y2="125" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<line x1="650" y1="215" x2="723" y2="191" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<line x1="950" y1="145" x2="990" y2="145" stroke="#333333" stroke-width="1.2" marker-end="url(#m333333)"/>
+<rect x="990" y="115" width="100" height="60" rx="0" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.0"/>
+<text x="1040" y="140.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" text-anchor="middle">/odom_eskf</text>
+<text x="1040" y="154.7" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" text-anchor="middle">Odometry</text>
+<text x="1040" y="205.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10" font-weight="normal" fill="#4d4d4d" text-anchor="middle">zerokey_sim</text>
+<text x="1040" y="219.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10" font-weight="normal" fill="#4d4d4d" text-anchor="middle">source_topic</text>
+<text x="1040" y="233.0" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10" font-weight="normal" fill="#4d4d4d" text-anchor="middle">선택 입력</text>
+<text x="550" y="315" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="10" font-weight="normal" fill="#4d4d4d" text-anchor="middle">k: 엔코더 스케일 오차 (v_enc = (1 + k)·v_true) · IMU orientation 미사용 · /ground_truth 는 평가 전용</text>
+</svg>

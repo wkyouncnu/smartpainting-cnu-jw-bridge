@@ -203,7 +203,7 @@
   var h1s = document.querySelectorAll('#out h1');
   for (var i = 1; i < h1s.length; i++) h1s[i].classList.add('pagebreak');
 
-  // 문서 정보 줄 — 첫 h1 아래에 'PDF 생성일 · 원본 MD' 를 단다 (GitHub README 와 같은 원본임을 표시)
+  // 문서 정보 줄 — 첫 h1 아래 작성일 (작성자·저장소는 README 본문)
   (function () {
     var first = document.querySelector('#out h1');
     if (!first) return;
@@ -211,8 +211,7 @@
     var d = document.createElement('div');
     d.className = 'docmeta';
     var now = new Date(), z = function (n) { return (n < 10 ? '0' : '') + n; };
-    d.textContent = '이 PDF 는 README.md 에서 자동 생성됨  |  생성 ' + now.getFullYear() + '-' + z(now.getMonth() + 1) + '-' + z(now.getDate())
-                  + '  |  최신판: GitHub 저장소의 README.md';
+    d.textContent = '작성일 ' + now.getFullYear() + '-' + z(now.getMonth() + 1) + '-' + z(now.getDate());
     first.parentNode.insertBefore(d, first.nextSibling);
   })();
 
