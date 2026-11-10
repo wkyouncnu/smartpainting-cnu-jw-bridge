@@ -139,19 +139,22 @@ if [ "$DO_BUILD" -eq 1 ]; then
   # ---------------------------------------------------------------- 7
   step "[7/7] ~/.bashrc 자동 source"
   MARK="# >>> smartpainting-sim >>>"
+  END="# <<< smartpainting-sim <<<"
   if grep -qF "$MARK" "$HOME/.bashrc"; then
-    ok "이미 등록됨"
+    # 예전 블록(다른 폴더를 가리킬 수 있음)을 지우고 지금 저장소 경로로 다시 쓴다
+    sed -i "\|$MARK|,\|$END|d" "$HOME/.bashrc"
+    msg="갱신 — 이 저장소($REPO)를 가리키도록 다시 씀"
   else
-    cat >> "$HOME/.bashrc" <<EOF
-
+    msg="등록 — 새 터미널부터 적용"
+  fi
+  cat >> "$HOME/.bashrc" <<EOF
 $MARK
 source /opt/ros/$ROS_DISTRO_WANT/setup.bash
 [ -f "$REPO/install/setup.bash" ] && source "$REPO/install/setup.bash"
 export ROS_DOMAIN_ID=\${ROS_DOMAIN_ID:-0}
-# <<< smartpainting-sim <<<
+$END
 EOF
-    ok "등록 — 새 터미널부터 적용"
-  fi
+  ok "$msg"
 
   echo
   echo "${B}설치 확인${N}"

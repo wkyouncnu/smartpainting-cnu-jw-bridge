@@ -181,7 +181,7 @@ bash install.sh
 | [4/7] 패키지 설치 | ROS 2 Jazzy desktop + Gazebo Harmonic + ros_gz + rqt 등 (약 – GB) | **1–0분** |
 | [5/7] rosdep | 의존성 데이터베이스 | 1분 |
 | [6/7] 빌드 | `colcon build --symlink-install` (sp_* 패키지 4개) | 1분 |
-| [7/7] bashrc | 새 터미널을 열면 ROS 가 자동으로 잡히게 등록 | 즉시 |
+| [7/7] bashrc | 새 터미널을 열면 ROS 가 자동으로 잡히게 등록 (다시 돌리면 지금 폴더로 갱신) | 즉시 |
 
 **성공하면 이렇게 끝난다** (실제 실행 화면):
 
