@@ -1,0 +1,38 @@
+# README.md (또는 그 그림·조판 도구)가 바뀌어 push 되면 PDF 매뉴얼을 다시 뽑아 커밋한다.
+# GitHub 웹에서 README 를 직접 고쳐도 같은 일이 일어난다 → README 와 PDF 가 항상 같다.
+name: README → PDF
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "README.md"
+      - "docs/img/**"
+      - "tools/docs/**"
+      - ".github/workflows/pdf.yml"
+  workflow_dispatch:        # Actions 탭에서 손으로 돌릴 수도 있다
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdf-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 한글 글꼴
+        run: sudo apt-get update -q && sudo apt-get install -y -q fonts-noto-cjk fonts-noto-cjk-extra
+      - name: PDF 생성
+        run: bash tools/docs/pdf_sync.sh --force
+      - name: 바뀌었으면 커밋
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/manual/*.pdf
+          if git diff --cached --quiet; then echo "PDF 변경 없음"; exit 0; fi
+          git commit -m "docs: README.md 에서 PDF 매뉴얼 자동 재생성 [skip ci]"
+          git push

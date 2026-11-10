@@ -14,7 +14,7 @@
 #   들어 있으면** 그 셸까지 잡힌다 (실제로 처음에 자기를 죽이고 멈췄다).
 set -u
 
-PAT='[g]z sim|[p]arameter_bridge|[r]obot_state_pub|[r]viz2|[s]p_localization/lib|[s]p_gazebo/lib|[r]os2 launch sp_'
+PAT='[g]z sim|[p]arameter_bridge|[r]obot_state_pub|[r]viz2|[s]p_localization/lib|[s]p_gazebo/lib|[s]p_cnu_bridge/lib|[r]os2 run sp_|[r]qt_graph|[r]os2 launch sp_'
 
 # 나 자신부터 init 까지 조상 PID 를 모아 제외 목록으로 쓴다
 SKIP=" $$ "

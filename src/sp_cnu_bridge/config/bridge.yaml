@@ -1,0 +1,20 @@
+# sp_cnu_bridge 파라미터 — 여기만 고치면 된다 (빌드 다시 할 필요 없음: --symlink-install)
+zerokey_sim:
+  ros__parameters:
+    source_topic: /ground_truth   # Gazebo 참값. ESKF 결과를 쓰려면 /odom_eskf
+    rate_hz: 50.0                 # /zerokey/* 발행 주기 [Hz]
+    frame_id: zerokey
+    pos_noise_std: 0.0            # 위치 잡음 표준편차 [m]   (ZeroKey 흉내: 0.01~0.03)
+    yaw_noise_std_deg: 0.0        # 헤딩 잡음 표준편차 [deg]
+
+mpos_server:
+  ros__parameters:
+    host: 0.0.0.0                 # 모든 네트워크 카드에서 받는다
+    port: 5010                    # 사양서 2-1 (단일 포트)
+    position_topic: /zerokey/position
+    orientation_topic: /zerokey/orientation
+    pos_scale: 1000.0             # m → mm
+    pos_decimals: 0               # X·Y·Z 소수 자릿수 (0 = 정수)
+    yaw_decimals: 2               # RZ 소수 자릿수
+    stale_timeout_s: 0.3          # 이보다 오래 새 값이 없으면 LOCALIZATION_STATUS = 1
+    log_every_n: 100              # GET_CUR_MPOS 를 N 번 받을 때마다 로그 한 줄

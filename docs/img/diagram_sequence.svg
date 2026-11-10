@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 666" width="1100" height="666">
+<defs><marker id="mdb2777" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#db2777"/></marker><marker id="mdb2777s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#db2777"/></marker><marker id="m16a34a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="m16a34as" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#16a34a"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550" y="32" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="middle">TCP 시퀀스 — JW(클라이언트)가 묻고, CN(우리, 서버)이 답한다</text>
+<rect x="110" y="52" width="240" height="46" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.6"/>
+<text x="230" y="81" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">JW 통합제어기 (Client)</text>
+<rect x="750" y="52" width="240" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+<text x="870" y="81" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">CN mpos_server (Server :5010)</text>
+<line x1="230" y1="98" x2="230" y2="616" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="870" y1="98" x2="870" y2="616" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="230" y1="130" x2="868" y2="130" stroke="#db2777" stroke-width="2" marker-end="url(#mdb2777)"/>
+<text x="549.0" y="123.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#db2777" text-anchor="middle">TCP connect (1 s 간격 재시도, 최대 120 s)</text>
+<line x1="870" y1="164" x2="232" y2="164" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
+<text x="551.0" y="157.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#16a34a" text-anchor="middle">accept</text>
+<line x1="230" y1="198" x2="868" y2="198" stroke="#db2777" stroke-width="2" marker-end="url(#mdb2777)"/>
+<text x="549.0" y="191.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#db2777" text-anchor="middle">$JW,1,1,GET_VERSION,1,100</text>
+<text x="890" y="202" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">버전 1.00</text>
+<line x1="870" y1="232" x2="232" y2="232" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
+<text x="551.0" y="225.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#16a34a" text-anchor="middle">$CN,1,1,GET_VERSION,1,100</text>
+<line x1="230" y1="266" x2="868" y2="266" stroke="#db2777" stroke-width="2" marker-end="url(#mdb2777)"/>
+<text x="549.0" y="259.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#db2777" text-anchor="middle">$JW,2,1,GET_LOCALIZATION_STATUS,0</text>
+<text x="890" y="270" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">2 가 나올 때까지 1 s 마다</text>
+<line x1="870" y1="300" x2="232" y2="300" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
+<text x="551.0" y="293.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#16a34a" text-anchor="middle">$CN,2,1,GET_LOCALIZATION_STATUS,2,2,0</text>
+<text x="890" y="304" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">2 = 위치 추정 가능</text>
+<line x1="230" y1="334" x2="868" y2="334" stroke="#db2777" stroke-width="2" marker-end="url(#mdb2777)"/>
+<text x="549.0" y="327.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#db2777" text-anchor="middle">$JW,3,1,REQ_ORIGIN_INIT,0</text>
+<text x="890" y="338" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">1 이 나올 때까지</text>
+<line x1="870" y1="368" x2="232" y2="368" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
+<text x="551.0" y="361.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#16a34a" text-anchor="middle">$CN,3,1,REQ_ORIGIN_INIT,2,1,0</text>
+<text x="890" y="372" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">1 = 반영 완료</text>
+<rect x="60" y="384" width="980" height="28" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.6"/>
+<text x="550" y="403" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="12.5" font-weight="bold" fill="#854d0e" text-anchor="middle">정상 운용 — 아래 한 쌍을 100 Hz (10 ms) 로 반복</text>
+<line x1="230" y1="436" x2="868" y2="436" stroke="#db2777" stroke-width="2" marker-end="url(#mdb2777)"/>
+<text x="549.0" y="429.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#db2777" text-anchor="middle">$JW,4,1,GET_CUR_MPOS,0</text>
+<text x="890" y="440" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">위치·자세 요청</text>
+<line x1="870" y1="470" x2="232" y2="470" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
+<text x="551.0" y="463.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#16a34a" text-anchor="middle">$CN,4,1,GET_CUR_MPOS,4,-2680,-878,520,0.00</text>
+<text x="890" y="474" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="start">X Y Z [mm], RZ [deg]</text>
+<line x1="230" y1="504" x2="868" y2="504" stroke="#db2777" stroke-width="2" marker-end="url(#mdb2777)"/>
+<text x="549.0" y="497.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#db2777" text-anchor="middle">$JW,5,1,GET_CUR_MPOS,0</text>
+<line x1="870" y1="538" x2="232" y2="538" stroke="#16a34a" stroke-width="2" marker-end="url(#m16a34a)"/>
+<text x="551.0" y="531.0" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="12" font-weight="normal" fill="#16a34a" text-anchor="middle">$CN,5,1,GET_CUR_MPOS,4,-2675,-878,520,0.12</text>
+<text x="550" y="572" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="18" font-weight="normal" fill="#475569" text-anchor="middle">⋮</text>
+<text x="550" y="644" font-family="'Malgun Gothic','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',sans-serif" font-size="11.5" font-weight="normal" fill="#475569" text-anchor="middle">응답의 SEQ 는 요청의 SEQ 를 그대로 쓴다 · 응답 지연 100 ms 경고 / 300 ms 값 무효 / 1000 ms 두절 → 재접속</text>
+</svg>

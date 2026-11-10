@@ -1,7 +1,7 @@
 # 자기위치 추정 — `sp_localization`
 
 
-실행 명령은 [README — 실행](../README.md#실행--터미널-4개) 에 모아 뒀다.
+실행 명령은 [HANDOVER — 실행](HANDOVER.md#실행--터미널-4개) 에 모아 뒀다.
 아래는 **무엇을 왜 그렇게 만들었는지**다.
 
 ### 센서 배치 (이상적 배치 기준)
@@ -182,7 +182,7 @@ ros2 topic pub -r 20 /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.45}}"
 ros2 run sp_localization monitor
 ```
 
-터미널 1~4 를 다 띄운 상태여야 한다 — [README — 실행](../README.md#실행--터미널-4개) 참조.
+터미널 1~4 를 다 띄운 상태여야 한다 — [HANDOVER — 실행](HANDOVER.md#실행--터미널-4개) 참조.
 
 **`monitor` 는 `lap_eval` 과 같은 프로그램이다.** 평가식도 그림도 같고,
 기본값만 다르다. 위 한 줄은 아래와 완전히 같다:

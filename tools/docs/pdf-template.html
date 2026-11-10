@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>매뉴얼</title>
+<style>
+  /* 쪽 번호는 @page 의 마진 박스로 넣는다. Chrome 이 지원하는 것을 확인했다
+     (2026-09-16: 카운터 없는 PDF 10255 bytes vs 있는 PDF 15258 bytes).
+     position:fixed 로 흉내 내면 모든 쪽에 같은 숫자가 찍힌다 — 쓰지 않는다. */
+  @page {
+    size: A4;
+    margin: 13mm 12mm 16mm 12mm;
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-family: "Malgun Gothic", "맑은 고딕", "Noto Sans CJK KR", sans-serif;
+      font-size: 8.6pt;
+      color: #94a3b8;
+    }
+  }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Malgun Gothic", "맑은 고딕", "Noto Sans CJK KR", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+    font-size: 10.2pt; line-height: 1.5; color: #1e293b; margin: 0;
+  }
+
+  /* ---------- 제목 ---------- */
+  h1, h2, h3, h4 { line-height: 1.35; break-after: avoid; page-break-after: avoid; }
+  h1 {
+    font-size: 18pt; margin: 0 0 10px; padding-bottom: 6px;
+    border-bottom: 3px solid #1d4ed8; color: #0f172a;
+  }
+  h1.pagebreak { break-before: page; page-break-before: always; padding-top: 4px; }
+  h2 {
+    font-size: 14pt; margin: 18px 0 8px; padding: 5px 0 5px 10px;
+    border-left: 5px solid #1d4ed8; background: #f1f5f9; color: #0f172a;
+  }
+  h3 { font-size: 11.6pt; margin: 13px 0 6px; color: #1d4ed8; }
+  h4 { font-size: 11pt; margin: 14px 0 6px; color: #334155; }
+
+  /* ---------- 본문 ---------- */
+  p { margin: 5px 0; orphans: 2; widows: 2; }
+  strong { color: #0f172a; }
+  hr { border: 0; border-top: 1px solid #cbd5e1; margin: 14px 0; }
+  a { color: #1d4ed8; text-decoration: none; }
+
+  ul, ol { margin: 6px 0; padding-left: 22px; }
+  li { margin: 1.5px 0; }
+  li > ul, li > ol { margin: 2px 0; }
+
+  /* 체크박스 */
+  li:has(> input[type=checkbox]) { list-style: none; margin-left: -18px; }
+  input[type=checkbox] {
+    width: 11px; height: 11px; margin-right: 7px; vertical-align: -1px;
+    appearance: none; border: 1.6px solid #64748b; border-radius: 2px; background: #fff;
+  }
+
+  /* ---------- 코드 ---------- */
+  code {
+    font-family: Consolas, "D2Coding", "Noto Sans Mono CJK KR", "DejaVu Sans Mono", monospace; font-size: 9.5pt;
+    background: #eef2f7; padding: 1px 5px; border-radius: 3px; color: #b91c1c;
+  }
+  pre {
+    background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #64748b;
+    border-radius: 4px; padding: 8px 11px; margin: 7px 0;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  pre code {
+    background: none; padding: 0; color: #0f172a; font-size: 9pt; line-height: 1.5;
+    white-space: pre-wrap; word-break: break-all;
+  }
+
+  /* ---------- 표 ---------- */
+  table {
+    border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.6pt;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  th, td { border: 1px solid #cbd5e1; padding: 4px 7px; text-align: left; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: 700; color: #0f172a; }
+  tr:nth-child(even) td { background: #f8fafc; }
+
+  /* ---------- 그림 ----------
+     그림이 두 쪽에 걸치지 않게 하는 데는 규칙 하나로 부족하다.
+
+     (1) break-inside: avoid 는 **한 쪽에 들어가는 그림**만 다음 쪽으로 밀어 준다.
+         쪽보다 큰 그림에는 아무 효과가 없다. 브라우저는 자를 수밖에 없다.
+     (2) 그래서 높이를 본문 안으로 **제한**한다.
+         A4 297mm - 위 13 - 아래 16 = 본문 268mm. 여백을 빼고 248mm 로 잡는다.
+         max-width 와 max-height 를 함께 주면 비율은 저절로 유지된다.
+     (3) marked 는 그림을 <p> 로 감싼다. 그 <p> 에도 avoid 를 걸어야 한다
+         (.figblock — 렌더 뒤 JS 가 붙인다).
+
+     2026-09-17 측정: 세로/가로 비가 1.44 를 넘는 그림 11개가 쪽을 넘고 있었다.
+     가장 심한 것은 SB10_logic_done (2.13). */
+  img { max-width: 100%; max-height: 248mm; height: auto; display: block;
+        margin: 9px auto;
+        break-inside: avoid; page-break-inside: avoid; }
+  .figblock { break-inside: avoid; page-break-inside: avoid; margin: 9px 0; }
+
+  /* ---------- 콜아웃 ---------- */
+  blockquote {
+    margin: 9px 0; padding: 7px 12px; border-left: 4px solid #94a3b8;
+    background: #f8fafc; color: #334155;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  blockquote p:first-child { margin-top: 0; }
+  blockquote p:last-child  { margin-bottom: 0; }
+  .callout-title { font-weight: 700; margin-bottom: 5px; color: #0f172a; }
+  .cal-note      { border-left-color: #1d4ed8; background: #eff6ff; }
+  .cal-tip       { border-left-color: #0d9488; background: #f0fdfa; }
+  .cal-important { border-left-color: #7c3aed; background: #f5f3ff; }
+  .cal-warning   { border-left-color: #d97706; background: #fffbeb; }
+  .cal-caution   { border-left-color: #dc2626; background: #fef2f2; }
+  .cal-note .callout-title      { color: #1d4ed8; }
+  .cal-tip .callout-title       { color: #0d9488; }
+  .cal-important .callout-title { color: #7c3aed; }
+  .cal-warning .callout-title   { color: #b45309; }
+  .cal-caution .callout-title   { color: #dc2626; }
+
+  /* 위키링크 */
+  .wl { color: #1d4ed8; border-bottom: 1px dotted #1d4ed8; }
+
+  /* 표지 정보 */
+  .docmeta {
+    font-size: 9pt; color: #64748b; border: 1px solid #e2e8f0;
+    background: #f8fafc; padding: 6px 10px; border-radius: 4px; margin: 0 0 16px;
+  }
+</style>
+</head>
+<body>
+<div id="out"></div>
+
+<script id="mdsrc" type="text/plain">
+<!--MDCONTENT-->
+</script>
+
+<script>
+<!--MARKEDJS-->
+</script>
+<script>
+(function () {
+  var raw = document.getElementById('mdsrc').textContent;
+
+  // YAML 프론트매터 제거 + title 추출
+  var meta = {};
+  var fm = raw.match(/^\s*---\r?\n([\s\S]*?)\r?\n---\r?\n/);
+  if (fm) {
+    fm[1].split(/\r?\n/).forEach(function (l) {
+      var m = l.match(/^([a-zA-Z_]+):\s*(.*)$/);
+      if (m) meta[m[1]] = m[2];
+    });
+    raw = raw.slice(fm[0].length);
+  }
+
+
+  marked.setOptions({ gfm: true, breaks: false, headerIds: false, mangle: false });
+  var html = marked.parse(raw);
+
+
+  // [[위키링크]] -> 일반 텍스트 강조
+  html = html.replace(/\[\[([^\]|#]+)(\|[^\]]+)?\]\]/g, function (_, a, b) {
+    return '<span class="wl">' + (b ? b.slice(1) : a) + '</span>';
+  });
+
+  document.getElementById('out').innerHTML = html;
+
+  // 콜아웃 변환
+  var ICON = { note:'ℹ', tip:'✎', important:'★', warning:'⚠', caution:'✖' };
+  document.querySelectorAll('#out blockquote').forEach(function (bq) {
+    var p = bq.querySelector('p');
+    if (!p) return;
+    var m = p.innerHTML.match(/^\s*\[!(\w+)\]([ \t]*)(\n|<br\s*\/?>)?\s*([\s\S]*)$/);
+    if (!m) return;
+    var type = m[1].toLowerCase(), rest = m[4];
+    // GitHub 형식: [!NOTE] 가 줄에 혼자 있는 경우도, 같은 줄에 제목이 있는 경우도 읽는다
+    var LABEL = { note:'참고', tip:'팁', important:'중요', warning:'주의', caution:'경고' };
+    // 첫 줄(보통 **굵은 제목**  ← 줄 끝 공백 두 칸 = 줄바꿈)을 제목으로 쓴다. 본문이 없으면 기본 제목
+    if (rest === '') rest = (LABEL[type] || type);
+    bq.classList.add('cal-' + type);
+    var brIdx = rest.search(/<br\s*\/?>/i);
+    var title, body;
+    if (brIdx >= 0) {
+      title = rest.slice(0, brIdx);
+      body  = rest.slice(brIdx).replace(/^<br\s*\/?>\s*/i, '');
+    } else { title = rest; body = ''; }
+    p.innerHTML = body;
+    if (!body.trim()) p.remove();
+    var t = document.createElement('div');
+    t.className = 'callout-title';
+    t.innerHTML = (ICON[type] || '') + ' ' + title;
+    bq.insertBefore(t, bq.firstChild);
+  });
+
+  // 그림만 들어 있는 문단에 .figblock — 그림과 그 문단이 함께 다음 쪽으로 넘어간다.
+  // img 에만 avoid 를 걸면 <p> 가 쪼개지면서 그림이 쪽 경계에 걸리는 경우가 있다.
+  Array.prototype.forEach.call(document.querySelectorAll('#out p'), function (p) {
+    var imgs = p.querySelectorAll('img');
+    if (!imgs.length) return;
+    if (p.textContent.trim() === '') p.classList.add('figblock');
+  });
+
+  // 1부 / 2부 / 마무리 등 두 번째 이후 h1 은 새 페이지에서 시작
+  var h1s = document.querySelectorAll('#out h1');
+  for (var i = 1; i < h1s.length; i++) h1s[i].classList.add('pagebreak');
+
+  // 문서 정보 줄 — 첫 h1 아래에 'PDF 생성일 · 원본 MD' 를 단다 (GitHub README 와 같은 원본임을 표시)
+  (function () {
+    var first = document.querySelector('#out h1');
+    if (!first) return;
+    document.title = first.textContent;
+    var d = document.createElement('div');
+    d.className = 'docmeta';
+    var now = new Date(), z = function (n) { return (n < 10 ? '0' : '') + n; };
+    d.textContent = '이 PDF 는 README.md 에서 자동 생성됨  |  생성 ' + now.getFullYear() + '-' + z(now.getMonth() + 1) + '-' + z(now.getDate())
+                  + '  |  최신판: GitHub 저장소의 README.md';
+    first.parentNode.insertBefore(d, first.nextSibling);
+  })();
+
+  document.documentElement.setAttribute('data-ready', '1');
+})();
+</script>
+</body>
+</html>

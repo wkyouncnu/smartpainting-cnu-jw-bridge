@@ -1,12 +1,12 @@
 # 로봇 모델과 동작 시나리오
 
 6안 도면 로봇(`sp_description`)의 구조, 동작 스크립트(`maneuver.py`, `patrol.py`), 그리고 그 과정에서 찾은 문제와 해결 기록.
-실행 명령은 [README — 실행](../README.md#실행--터미널-4개) 참조.
+실행 명령은 [HANDOVER — 실행](HANDOVER.md#실행--터미널-4개) 참조.
 
 ## 동작 시나리오 — `maneuver.py`
 
 주행 → 정지 → 몸체부 회전 → 전후단부 착지 → 구획 왕복을 **한 명령**으로 돌린다.
-실행 방법은 [README — 실행](../README.md#실행--터미널-4개) 참조 (Gazebo 는 따로 띄워 둔다).
+실행 방법은 [HANDOVER — 실행](HANDOVER.md#실행--터미널-4개) 참조 (Gazebo 는 따로 띄워 둔다).
 전체 옵션은 `ros2 run sp_gazebo maneuver.py --help`.
 
 순서:

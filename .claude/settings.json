@@ -1,0 +1,17 @@
+{
+  "_설명": "Claude Code 세션이 끝날 때 README.md(그림·조판 도구 포함)가 PDF 보다 새로우면 PDF 매뉴얼을 다시 뽑는다. 손으로: bash tools/docs/pdf_sync.sh",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "d=\"${CLAUDE_PROJECT_DIR:-$PWD}\"; while [ \"$d\" != \"/\" ] && [ ! -f \"$d/tools/docs/pdf_sync.sh\" ]; do d=$(dirname \"$d\"); done; [ -f \"$d/tools/docs/pdf_sync.sh\" ] && bash \"$d/tools/docs/pdf_sync.sh\" >/dev/null 2>&1 || true",
+            "timeout": 300,
+            "statusMessage": "README.md → PDF 동기화"
+          }
+        ]
+      }
+    ]
+  }
+}

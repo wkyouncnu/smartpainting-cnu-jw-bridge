@@ -1,0 +1,2 @@
+# 원본 Markdown            출력 PDF   (저장소 루트 기준 경로)
+README.md                  docs/manual/CNU_JW_Bridge_Manual.pdf
